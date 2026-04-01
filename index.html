@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vincenzo Vetro — 3D Artist</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/bio.css">
+</head>
+<body>
+
+  <!-- CURSORE CUSTOM -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ATMOSFERA -->
+  <div class="scanlines"></div>
+  <div class="grain"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- SCHERMATA DI CARICAMENTO -->
+  <div id="loader">
+    <div class="loader-grid"></div>
+    <div class="loader-inner">
+      <div class="loader-pre">Inizializzazione sistema</div>
+      <div class="loader-name" data-text="VETRO">VETRO</div>
+      <div class="loader-sub">3D Artist · Verona · Italia</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill" id="lbar"></div>
+      </div>
+      <div class="loader-pct" id="lpct">0%</div>
+    </div>
+  </div>
+
+  <!-- NAVIGAZIONE -->
+  <nav>
+    <a class="nav-logo" href="#" onclick="showPage('home'); return false;">V·V</a>
+    <ul class="nav-menu">
+      <li><a href="#" onclick="showPage('home');              return false;">Home</a></li>
+      <li><a href="#" onclick="showPage('project','capanna'); return false;">Lavori</a></li>
+      <li><a href="#" onclick="showPage('bio');               return false;">Bio</a></li>
+    </ul>
+    <span class="nav-loc">Verona · <span>IT</span></span>
+  </nav>
+
+  <!-- CONTENUTO PAGINE (incluso via JS) -->
+  <div id="app"></div>
+
+  <!-- JAVASCRIPT — nav e widget prima delle pagine -->
+  <script src="js/nav.js"></script>
+  <script src="js/reveal-widget.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <!-- CARICAMENTO PAGINE HTML PARZIALI -->
+  <script>
+    const PAGES = [
+      { id: 'home',    file: 'pages/home.html'    },
+      { id: 'project', file: 'pages/project.html' },
+      { id: 'bio',     file: 'pages/bio.html'     },
+    ];
+
+    async function loadPages() {
+      const app = document.getElementById('app');
+      for (const { file } of PAGES) {
+        const res  = await fetch(file);
+        const html = await res.text();
+        app.insertAdjacentHTML('beforeend', html);
+      }
+      checkReveal();
+    }
+
+    loadPages();
+  </script>
+
+  <!-- EFFETTI VISIVI -->
+  <script src="js/bg.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/loader.js"></script>
+
+</body>
+</html>

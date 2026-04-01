@@ -1,0 +1,141 @@
+<!-- ================================================
+     pages/project.html  ·  Sezione Progetti
+     ================================================ -->
+<div id="project" class="page">
+
+  <!-- SWITCHER -->
+  <div class="proj-switcher">
+    <button class="sw-btn active" onclick="switchProject('capanna')">//&nbsp;Capanna</button>
+    <button class="sw-btn"        onclick="switchProject('lampada')">//&nbsp;Lampada</button>
+    <button class="sw-btn"        onclick="switchProject('cuffie')" >//&nbsp;Cuffie</button>
+  </div>
+
+  <!-- ===== CAPANNA ===== -->
+  <div id="p-capanna">
+
+    <div class="proj-hero">
+      <h1 class="proj-title">Capanna<em>Storica</em></h1>
+      <div class="proj-meta">
+        <div class="meta-row"><span class="meta-l">Software</span><span class="meta-v">Blender · Cycles</span></div>
+        <div class="meta-row"><span class="meta-l">Anno</span><span class="meta-v">2024</span></div>
+        <div class="meta-row"><span class="meta-l">Tipo</span><span class="meta-v">Scena ambientale</span></div>
+        <div class="meta-row"><span class="meta-l">Luogo</span><span class="meta-v">Verona, IT</span></div>
+      </div>
+    </div>
+
+    <div class="reveal-sec reveal">
+      <div class="s-label">Wireframe / Render</div>
+      <div class="reveal-hint">← Trascina per rivelare →</div>
+      <div class="rev-labels">
+        <span class="rev-lbl">← Wireframe</span>
+        <span class="rev-lbl">Render →</span>
+      </div>
+      <div class="reveal-wrap" id="rw-capanna">
+        <img class="rev-img"      src="../images/stanzarender.jpg"    alt="Render stanza">
+        <img class="rev-img top"  src="../images/stanzawireframe.jpg" alt="Wireframe stanza" id="rt-capanna">
+        <div class="rev-divider" id="rd-capanna"><div class="rev-handle">↔</div></div>
+      </div>
+    </div>
+
+    <div class="process-sec reveal">
+      <div class="s-label">Processo</div>
+      <div class="process-scroll">
+        <img class="proc-img" src="../images/stanzawireframe.jpg" alt="Wireframe">
+        <img class="proc-img" src="../images/stanzarender.jpg"    alt="Render">
+        <img class="proc-img" src="../images/capanna.jpg"         alt="Finale">
+      </div>
+    </div>
+
+    <div class="proj-desc reveal">
+      <h3>Descrizione</h3>
+      <p>Una ricostruzione tridimensionale di un interno storico — una capanna da campo con oggetti d'epoca, mappe geografiche e strumenti di navigazione. La sfida principale è stata riprodurre l'illuminazione calda di una lanterna a olio attraverso l'uso di Cycles e materiali PBR di alta qualità.</p>
+    </div>
+
+  </div><!-- /p-capanna -->
+
+  <!-- ===== LAMPADA ===== -->
+  <div id="p-lampada" style="display:none;">
+
+    <div class="proj-hero">
+      <h1 class="proj-title">Lampada<em>da Tavolo</em></h1>
+      <div class="proj-meta">
+        <div class="meta-row"><span class="meta-l">Software</span><span class="meta-v">Maya · Arnold</span></div>
+        <div class="meta-row"><span class="meta-l">Anno</span><span class="meta-v">2024</span></div>
+        <div class="meta-row"><span class="meta-l">Tipo</span><span class="meta-v">Hard Surface</span></div>
+        <div class="meta-row"><span class="meta-l">Poligoni</span><span class="meta-v">~45K</span></div>
+      </div>
+    </div>
+
+    <div class="reveal-sec reveal">
+      <div class="s-label">Wireframe / Shading</div>
+      <div class="reveal-hint">← Trascina per rivelare →</div>
+      <div class="rev-labels">
+        <span class="rev-lbl">← Wireframe</span>
+        <span class="rev-lbl">Shading →</span>
+      </div>
+      <div class="reveal-wrap" id="rw-lampada">
+        <img class="rev-img"      src="../images/shadinglampada.jpg"   alt="Shading lampada">
+        <img class="rev-img top"  src="../images/wireframelampada.jpg" alt="Wireframe lampada" id="rt-lampada">
+        <div class="rev-divider" id="rd-lampada"><div class="rev-handle">↔</div></div>
+      </div>
+    </div>
+
+    <div class="process-sec reveal">
+      <div class="s-label">Processo</div>
+      <div class="process-scroll">
+        <img class="proc-img" src="../images/wireframelampada.jpg" alt="Wireframe">
+        <img class="proc-img" src="../images/shadinglampada.jpg"   alt="Shading">
+        <img class="proc-img" src="../images/lamp_render.jpg"      alt="Render finale">
+      </div>
+    </div>
+
+    <div class="proj-desc reveal">
+      <h3>Descrizione</h3>
+      <p>Modellazione hard surface di una lampada da tavolo classica in Maya. Particolare attenzione alla curva del collo flessibile, realizzato con una catena di cilindri procedurali. Il materiale è un metallo satinato reso con Arnold per un look realistico e contemporaneo.</p>
+    </div>
+
+  </div><!-- /p-lampada -->
+
+  <!-- ===== CUFFIE ===== -->
+  <div id="p-cuffie" style="display:none;">
+
+    <div class="proj-hero">
+      <h1 class="proj-title">Cuffie<em>Wireless</em></h1>
+      <div class="proj-meta">
+        <div class="meta-row"><span class="meta-l">Software</span><span class="meta-v">Maya · Arnold</span></div>
+        <div class="meta-row"><span class="meta-l">Anno</span><span class="meta-v">2024</span></div>
+        <div class="meta-row"><span class="meta-l">Tipo</span><span class="meta-v">Product Design</span></div>
+        <div class="meta-row"><span class="meta-l">Poligoni</span><span class="meta-v">~80K</span></div>
+      </div>
+    </div>
+
+    <div class="reveal-sec reveal">
+      <div class="s-label">Wireframe / Shading</div>
+      <div class="reveal-hint">← Trascina per rivelare →</div>
+      <div class="rev-labels">
+        <span class="rev-lbl">← Wireframe</span>
+        <span class="rev-lbl">Shading →</span>
+      </div>
+      <div class="reveal-wrap" id="rw-cuffie">
+        <img class="rev-img"      src="../images/shadingcuffie.jpg"   alt="Shading cuffie">
+        <img class="rev-img top"  src="../images/cuffiewireframe.jpg" alt="Wireframe cuffie" id="rt-cuffie">
+        <div class="rev-divider" id="rd-cuffie"><div class="rev-handle">↔</div></div>
+      </div>
+    </div>
+
+    <div class="process-sec reveal">
+      <div class="s-label">Processo</div>
+      <div class="process-scroll">
+        <img class="proc-img" src="../images/cuffiewireframe.jpg" alt="Wireframe">
+        <img class="proc-img" src="../images/shadingcuffie.jpg"   alt="Shading">
+      </div>
+    </div>
+
+    <div class="proj-desc reveal">
+      <h3>Descrizione</h3>
+      <p>Modellazione product design di cuffie wireless in Maya. La geometria è costruita con cura per le cuciture del padiglione auricolare e il meccanismo di regolazione. Il workflow include subdivision surface e normal maps per il dettaglio finale.</p>
+    </div>
+
+  </div><!-- /p-cuffie -->
+
+</div><!-- /project -->
